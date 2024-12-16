@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Voltali",
+  "version": "1.0",
+  "description": "Copie automatiquement dans la presse papier la phrase.",
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "clipboardWrite"],
+  "host_permissions": [
+    "https://apprentissage.appli3.projet-voltaire.fr/entrainement/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "32": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "options_page": "options.html",
+  "commands": {
+    "open-extension": {
+      "suggested_key": {
+        "default": "Ctrl+X",
+        "mac": "Command+E"
+      },
+      "description": "Ouvrir l'extension"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
